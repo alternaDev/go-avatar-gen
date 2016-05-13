@@ -22,5 +22,5 @@ import (
 )
 
 avatar := avatarGen.GenerateAvatar("HeinzPeda", 64, 32) // => *image.RGBA
-err := nameGen.WriteImageToHTTP(respWriter, avatar)
+err := avatarGen.WriteImageToHTTP(respWriter, avatar)
 ```

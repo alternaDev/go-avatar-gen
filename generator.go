@@ -86,9 +86,9 @@ func GenerateAvatar(input string, blockSize int, borderSize int) (*image.RGBA) {
 }
 
 // WriteImageToHTTP Sends an image via http.
-func WriteImageToHTTP(w http.ResponseWriter, img *image.Image) (error) {
+func WriteImageToHTTP(w http.ResponseWriter, img image.Image) (error) {
   buffer := new(bytes.Buffer)
-  if err := png.Encode(buffer, *img); err != nil {
+  if err := png.Encode(buffer, img); err != nil {
     return err
   }
 
