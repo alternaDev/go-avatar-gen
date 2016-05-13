@@ -1,4 +1,4 @@
-package main
+package avatarGen
 
 import (
   "crypto/md5"
